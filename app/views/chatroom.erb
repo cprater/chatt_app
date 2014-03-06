@@ -1,0 +1,22 @@
+<div class="container">
+	<h1>Welcome to <%=@chatroom.name%></h1>
+	<%if session[:current_user] == @chatroom.user.id%>
+		<a href="/chatroom/<%=@chatroom.id%>/delete">delete</a>
+		<a href="/chatroom/<%=@chatroom.id%>/clear">clear messages</a>
+	<%end%>
+
+
+	<div class="chat-box">
+		<ul>
+			<%@chatroom.messages.each do |message|%>
+				<li><%=message.content%> -- <span class="written-by"><%=message.user.name%></span></li>
+			<%end%>
+		</ul>
+	</div>
+
+	<form action="/new/chatroom/message" method="POST">
+		<textarea class="type-message" rows="5" cols="25" name="message"></textarea>
+		<input type="hidden" name="chat_id" value="<%=@chatroom.id%>">
+		<input type="submit" value="Say it">
+	</form>
+</div>

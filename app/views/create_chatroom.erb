@@ -1,0 +1,12 @@
+<div class="container">
+	<h1>Create a chatroom</h1>
+	<form action="/new/chatroom" method="POST">
+		<label for="name">Name: </label>
+			<input id="name" name="chatroom[name]" type="text">
+		<label for="public">public</label>
+			<input type="radio" id="public" name="chatroom[public?]" value="true">
+		<label for="private">private</label>
+			<input type="radio" id="private" name="chatroom[public?]" value="false">
+			<input type="submit" value="Create">
+	</form>
+</div>

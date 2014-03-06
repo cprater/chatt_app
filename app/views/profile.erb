@@ -1,4 +1,13 @@
 <div class="container">
 	<h1><%=@user.name%>'s Profile</h1>
 	<a href="/logout">Logout</a>
+	<a href="/new/chatroom">Create a Chatroom</a>
+
+	<div class="list-rooms">
+		<ul>
+			<%@user.chatrooms.each do |room|%>
+				<li><a href="/chatroom/<%=room.id%>"><%=room.name%></a></li>
+			<%end%>
+		<ul>
+	</div>
 </div>
