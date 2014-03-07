@@ -1,1 +1,1 @@
-<li><%=@message.content%> -- <%=@message.user.name%></li>
+<li><span class="written-by <%if session[:current_user] == @message.user.id%>self-name<%end%>"><%=@message.user.name%></span>: <%=@message.content%></li>

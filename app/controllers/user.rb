@@ -42,6 +42,7 @@ post '/new/user' do
 	user = User.new(params[:user])
 
 	if user.save
+		session[:current_user] = user.id
 		redirect "/profile/#{user.id}"
 	else
 		@errors = true

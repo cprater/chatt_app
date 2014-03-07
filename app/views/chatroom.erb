@@ -8,8 +8,9 @@
 
 	<div class="chat-box">
 		<ul>
-			<%@chatroom.messages.each do |message|%>
-				<li><%=message.content%> -- <span class="written-by"><%=message.user.name%></span></li>
+			<%@chatroom.messages.each do |message|%>				
+				<% @message = message %>
+				<%= erb :_message %>
 			<%end%>
 		</ul>
 	</div>

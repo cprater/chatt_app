@@ -1,3 +1,10 @@
+get '/color' do
+	content_type :json
+	user = User.find(session[:current_user])
+
+	user.name.to_json
+end
+
 get '/new/chatroom' do 
 	erb :create_chatroom
 end
@@ -28,7 +35,7 @@ end
 #POST===========================================
 
 
-post '/new/chatroom' do 
+post '/new/chatroom' do
 	user = User.find(session[:current_user])
 	chatroom = Chatroom.new(params[:chatroom])
 
@@ -44,7 +51,7 @@ post '/new/chatroom/message' do
 
 	user.messages << @message
 	chatroom.messages << @message
-	# binding.pry
+	
 	erb :_message, layout: false
 
 	# redirect "/chatroom/#{chatroom.id}"

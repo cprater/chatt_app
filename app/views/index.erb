@@ -12,10 +12,15 @@
 
   <div class="list-rooms">
   	<h3>Join a public room</h3>
-  	<ul>
-  		<%@chatrooms.each do |room|%>
-  			<li><a href='/chatroom/<%=room.id%>'><%=room.name%></a></li>
-  		<%end%>
-		</ul>
+
+    <% if @chatrooms %>
+    	<ul>
+    		<%@chatrooms.each do |room|%>
+    			<li><a href='/chatroom/<%=room.id%>'><%=room.name%></a></li>
+    		<%end%>
+  		</ul>
+    <%else%>
+      <h4>Oops! There are no chatrooms</h4>
+    <%end%>
   </div>
 </div>
