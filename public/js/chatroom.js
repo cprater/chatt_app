@@ -22,6 +22,7 @@ $(function(){
 		$.post(url, data, function(serverResponse){
 			$('.chat-box > ul:last-child').append(serverResponse);
 			$('.type-message').val('');
+			$('.chat-box').load();
 			scrollToBottom();
 		});
 
