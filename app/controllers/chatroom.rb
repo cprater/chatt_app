@@ -37,13 +37,15 @@ post '/new/chatroom' do
 	redirect "/chatroom/#{chatroom.id}"
 end
 
-post '/new/chatroom/message' do 
+post '/new/chatroom/message' do
 	user = User.find(session[:current_user])
 	chatroom = Chatroom.find(params[:chat_id])
-	message = Message.new(content: params[:message])
+	@message = Message.new(content: params[:message])
 
-	user.messages << message
-	chatroom.messages << message
+	user.messages << @message
+	chatroom.messages << @message
+	# binding.pry
+	erb :_message, layout: false
 
-	redirect "/chatroom/#{chatroom.id}"
+	# redirect "/chatroom/#{chatroom.id}"
 end

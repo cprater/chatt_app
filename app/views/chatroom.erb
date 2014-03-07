@@ -14,8 +14,8 @@
 		</ul>
 	</div>
 
-	<form action="/new/chatroom/message" method="POST">
-		<textarea class="type-message" rows="5" cols="25" name="message"></textarea>
+	<form class="add-message"action="/new/chatroom/message" method="POST">
+		<textarea autofocus class="type-message" rows="5" cols="25" name="message"></textarea>
 		<input type="hidden" name="chat_id" value="<%=@chatroom.id%>">
 		<input type="submit" value="Say it">
 	</form>
