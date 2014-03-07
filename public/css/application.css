@@ -17,6 +17,10 @@
 	color: red;
 }
 
+textarea {
+	resize: none;
+}
+
 th {
   text-align: left;
 }
