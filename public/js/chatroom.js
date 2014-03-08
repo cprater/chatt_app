@@ -4,6 +4,7 @@ $(function(){
 	function scrollToBottom(){
 		$('.chat-box').scrollTop($('.chat-box')[0].scrollHeight);
 	}
+	scrollToBottom();
 
 //Refresh Messages
 	function refreshMessages(){

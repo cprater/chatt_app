@@ -22,17 +22,19 @@
 </head>
 <body>
   <div class="wrapper">
-    <ul class="left-nav">
-      <li><h1 class="title">chattycathy</h1></li>
-      <%if session[:current_user]%>
-        <li><a id="home" href="/">Home</a></li>
-        <li><a id="profile" href="/profile/<%=session[:current_user]%>">Profile</a></li>
-        <li><a id="logout" href="/logout">Logout</a></li>
-      <%else%>
-        <li><a id="login" href="/login">Login</a></li>
-        <li><a id="create-user" href="/new/user">Register</a></li>
-      <%end%>
-    </ul>
+    <div class="container">
+      <ul class="left-nav">
+        <li><h1 class="title">chattycathy</h1></li>
+        <%if session[:current_user]%>
+          <li><a id="home" href="/">Home</a></li>
+          <li><a id="profile" href="/profile/<%=session[:current_user]%>">Profile</a></li>
+          <li><a id="logout" href="/logout">Logout</a></li>
+        <%else%>
+          <li><a id="login" href="/login">Login</a></li>
+          <li><a id="create-user" href="/new/user">Register</a></li>
+        <%end%>
+      </ul>
+    </div>
   </div>
   <%= yield %>
 </body>
