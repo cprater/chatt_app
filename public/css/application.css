@@ -1,9 +1,66 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+body {
+	background-color: #EDEDED;
 }
+
+textarea {
+	resize: none;
+}
+
+th {
+  text-align: left;
+}
+
+
+.container {
+	top: 0;
+  margin: 0 auto;
+  width: 50%;
+  min-height: 100%;
+  padding: 0px 20px 20px 20px;
+  border-left: 1px dotted black;
+  border-right: 1px dotted black;
+}
+
+.nav {
+	position: fixed;
+	float: left;
+	top: 0;
+	left: 0;
+	padding: 0;
+	margin:0;
+	min-height: 100%;
+	width: 22%;
+	list-style: none;
+/*style*/
+	background-color: #454145;
+	box-shadow: 1px 1px 1px white;
+
+}
+
+.nav li {
+	padding: 2%;	
+	text-align: right;
+	padding-right: 5%;
+	color: #F2EFD8;
+	display: block;
+}
+
+/*Prevent hover-change to first link in nav*/
+.nav li:hover:first-child {
+	background-color: #454145;
+	border: none;
+}
+
+.nav li:hover {
+	background-color: #958796;
+	border: 1px dotted #454145;
+}
+
+.nav a {
+	text-decoration: none;
+	color: #F2EFD8;
+}
+
 
 .hide {
 	visibility: hidden;
@@ -17,18 +74,12 @@
 	color: red;
 }
 
-textarea {
-	resize: none;
-}
 
-th {
-  text-align: left;
-}
 
 .chat-box {
 	overflow: auto;
 	border: 1px solid black;
-	height: 200px;
+	min-height: 30%;
 }
 
 .chat-box ul {

@@ -32,4 +32,8 @@ $(function(){
 		});
 	});
 
+	// setInterval(function(){
+	// 	$(document).load('.chat-box')
+	// },1000)
+
 });

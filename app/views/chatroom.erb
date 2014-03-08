@@ -1,6 +1,5 @@
 <div class="container">
 	<h1>Welcome to <%=@chatroom.name%></h1>
-	<a href="/">Home</a>
 	<%if session[:current_user] == @chatroom.user.id%>
 		<a href="/chatroom/<%=@chatroom.id%>/delete">delete</a>
 		<a href="/chatroom/<%=@chatroom.id%>/clear">clear messages</a>

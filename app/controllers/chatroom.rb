@@ -54,5 +54,4 @@ post '/new/chatroom/message' do
 	
 	erb :_message, layout: false
 
-	# redirect "/chatroom/#{chatroom.id}"
 end
