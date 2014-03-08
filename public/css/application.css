@@ -18,14 +18,14 @@ th {
 	top: 0;
   margin: 0 auto;
   width: 50%;
-  min-height: 100%;
+  /*min-height: 100%;*/
   padding: 0px 20px 20px 20px;
-  border-left: 1px dotted black;
-  border-right: 1px dotted black;
+/*  border-left: 1px dotted black;
+  border-right: 1px dotted black;*/
 }
 
-.nav {
-	position: fixed;
+.left-nav {
+	position: absolute;
 	float: left;
 	top: 0;
 	left: 0;
@@ -40,7 +40,7 @@ th {
 
 }
 
-.nav li {
+.left-nav li {
 	padding: 2%;	
 	text-align: right;
 	padding-right: 5%;
@@ -48,22 +48,116 @@ th {
 	display: block;
 }
 
-/*Prevent hover-change to first link in nav*/
-.nav li:hover:first-child {
+/*Prevent hover-change to first link in left-nav*/
+.left-nav li:hover:first-child {
 	background-color: #454145;
 	border: none;
 }
 
-.nav li:hover {
+.left-nav li:hover {
 	background-color: #958796;
 	border: 1px dotted #454145;
 }
 
-.nav a {
+.left-nav a {
 	text-decoration: none;
 	color: #F2EFD8;
 }
 
+
+/*Right-nav*/
+.right-nav {
+	position: absolute;
+	float: right;
+	top: 0;
+	right: 0;
+	padding: 0;
+	margin:0;
+	min-height: 100%;
+	width: 22%;
+	list-style: none;
+/*style*/
+	background-color: #454145;
+	box-shadow: 1px 1px 1px white;
+
+}
+
+.right-nav li:first-child {
+	border-bottom: 1px dotted #454145;
+}
+
+/*Prevent hover-change to first link in right-nav*/
+.right-nav li:first-child:hover{
+	background-color: #454145;
+	border: 1px dotted #454145;
+}
+
+.right-nav li {
+	padding: 2%;	
+	text-align: left;
+	padding-left: 5%;
+	color: #F2EFD8;
+	display: block;
+}
+
+.right-nav li:hover {
+	background-color: #958796;
+	border: 1px dotted #454145;
+}
+
+.right-nav a {
+	text-decoration: none;
+	color: #F2EFD8;
+}
+
+.background-text {
+	position: relative;
+	margin-top: 30%;
+	margin: auto;
+	text-align: center;
+}
+
+.chat-box {
+	/*border: 2px solid #F2EFD8;*/
+	background-color: #BFBBBF;
+	box-shadow:inset 0 0 10px #454145;
+	/*border: 1px solid black;*/
+	min-height: 30%;
+	overflow: auto;
+}
+
+.chat-box ul {
+	/*border: 1px solid black;*/
+	list-style: none;
+}
+
+.list-rooms {
+	background-color: #958796;
+	box-shadow: 0 0 5px #454145;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.list-rooms table {
+	margin: 0 auto;
+}
+
+.list-rooms ul {
+	padding: 0 2%;
+}
+
+.list-rooms li{
+	list-style: none;
+}
+
+.list-rooms a {
+	text-decoration: none;
+	color: #F2EFD8;
+}
+
+.list-rooms a:hover {
+	text-decoration: underline;
+}
 
 .hide {
 	visibility: hidden;
@@ -77,22 +171,12 @@ th {
 	color: red;
 }
 
-
-
-.chat-box {
-	overflow: auto;
-	border: 1px solid black;
-	min-height: 30%;
-}
-
-.chat-box ul {
-	list-style: none;
-}
-
 .written-by {
-	color: red;
+	
+	color: #BF5669;
 }
 
 .self-name {
-	color: blue;
+	font-weight: bold;
+	color: #474D9E;
 }

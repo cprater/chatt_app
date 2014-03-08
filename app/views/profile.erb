@@ -1,14 +1,30 @@
 <div class="container">
-	<h1><%=@user.name%>'s Profile</h1>
-	<a href="/logout">Logout</a>
-	<a href="/new/chatroom">Create a Chatroom</a>
-	<a href="/">Home</a>
+	<ul class="right-nav">
+		<li><h1>:<%=@user.name%></h1></li>
+		<li><a href="/new/chatroom">Create a Chatroom</a></li>
+	</ul>
 
 	<div class="list-rooms">
-		<ul>
-			<%@user.chatrooms.each do |room|%>
-				<li><a href="/chatroom/<%=room.id%>"><%=room.name%></a></li>
-			<%end%>
-		<ul>
+		<table>
+			<tr>
+				<td>
+					<ul>
+						<li><h2 class="room-type">public rooms</h2></li>
+						<%@user.chatrooms.where(public?: true).each do |room|%>
+							<li><a href="/chatroom/<%=room.id%>"><%=room.name%></a></li>
+						<%end%>
+					<ul>
+				</td>
+
+				<td>
+					<ul>
+						<li><h2 class="room-type">private rooms</h2></li>
+						<%@user.chatrooms.where(public?: false).each do |room|%>
+							<li><a href="/chatroom/<%=room.id%>"><%=room.name%></a></li>
+						<%end%>
+					<ul>
+				</td>
+			</tr>
+		</table>
 	</div>
 </div>

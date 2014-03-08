@@ -1,19 +1,17 @@
 <div class="container">
-
-  
-
-
   <div class="list-rooms">
-  	<h3>Join a public room</h3>
-
     <% if @chatrooms %>
-    	<ul>
+    	<ul class= "right-nav">
+        <li><h2>:home</h2></li>
     		<%@chatrooms.each do |room|%>
     			<li><a href='/chatroom/<%=room.id%>'><%=room.name%></a></li>
-    		<%end%>
-  		</ul>
+        <%end%>
+      </ul>
     <%else%>
-      <h4>Oops! There are no chatrooms</h4>
+    <ul class= "right-nav">
+      <li><h4>Oops! There are no chatrooms</h4></li>
+      </ul>
     <%end%>
   </div>
+  <div class="background-text"><h3>Sign in or join a chat anonomously</h3></div>
 </div>
