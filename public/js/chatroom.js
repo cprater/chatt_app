@@ -6,6 +6,11 @@ $(function(){
 	}
 	scrollToBottom();
 
+//Refresh Messages
+	function refreshMessages(){
+		location.reload();
+	}
+
 //Submit with ctrl+enter && cmd+enter
 	$('.add-message').on('keydown', function(event){
 		if (event.keyCode == 13 && (event.metaKey || event.ctrlKey))
@@ -22,12 +27,9 @@ $(function(){
 		$.post(url, data, function(serverResponse){
 			$('.chat-box > ul:last-child').append(serverResponse);
 			$('.type-message').val('');
-			location.reload();
 			scrollToBottom();
+			refreshMessages();
 		});
-
-		
 	});
-
 
 });
