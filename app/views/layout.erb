@@ -21,7 +21,7 @@
   <title>chattycathy</title>
 </head>
 <body>
-  <!-- <div class="wrapper" -->
+  <div class="wrapper">
     <ul class="nav">
       <li><h1 class=".title">chattycathy.</h1></li>
       <%if session[:current_user]%>
@@ -33,7 +33,7 @@
         <li><a href="/new/user">Register</a></li>
       <%end%>
     </ul>    
-  <!-- </div> -->
+  </div>
   <%= yield %>
 </body>
 </html>
